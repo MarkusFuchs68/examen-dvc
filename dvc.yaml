@@ -1,7 +1,14 @@
 stages:
-  prepare:
+  download:
     cmd: python src/data/download.py
     deps:
     - src/data/download.py
     outs:
     - data/raw
+  preprocess:
+    cmd: python src/data/preprocess.py
+    deps:
+    - data/raw
+    - src/data/preprocess.py
+    outs:
+    - data/processed

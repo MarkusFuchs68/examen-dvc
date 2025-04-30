@@ -1,12 +1,12 @@
 schema: '2.0'
 stages:
-  prepare:
+  download:
     cmd: python src/data/download.py
     deps:
     - path: src/data/download.py
       hash: md5
-      md5: 616fe2eb924dac7f8295a34838c60638
-      size: 1035
+      md5: f5d21365498ad906a8c6a5323ce8aa0e
+      size: 989
     outs:
     - path: data/raw
       hash: md5
