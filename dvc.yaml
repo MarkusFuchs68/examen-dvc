@@ -12,3 +12,10 @@ stages:
     - src/data/preprocess.py
     outs:
     - data/processed
+  train:
+    cmd: python src/models/train.py
+    deps:
+    - data/processed
+    - src/models/train.py
+    outs:
+    - models/rfr_best_model.pkl

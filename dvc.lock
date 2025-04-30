@@ -31,3 +31,20 @@ stages:
       md5: 95244d0e77fc847b72aed85d0a906061.dir
       size: 572401
       nfiles: 6
+  train:
+    cmd: python src/models/train.py
+    deps:
+    - path: data/processed
+      hash: md5
+      md5: 95244d0e77fc847b72aed85d0a906061.dir
+      size: 572401
+      nfiles: 6
+    - path: src/models/train.py
+      hash: md5
+      md5: 8c00d96302fcc7eb849f2dc9bd525c33
+      size: 2024
+    outs:
+    - path: models/rfr_best_model.pkl
+      hash: md5
+      md5: 74c6d918ed2601a1dc843b999923a97c
+      size: 5396977
