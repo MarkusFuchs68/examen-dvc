@@ -15,7 +15,7 @@ def download_data(url, save_path):
 
 if __name__ == "__main__":
     # Define the path to save the data
-    data_dir = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'raw_data')
+    data_dir = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'raw')
     print(data_dir)
     os.makedirs(data_dir, exist_ok=True)
     save_path = os.path.join(data_dir, 'raw.csv')

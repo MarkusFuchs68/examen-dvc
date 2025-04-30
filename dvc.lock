@@ -1,14 +1,14 @@
 schema: '2.0'
 stages:
   prepare:
-    cmd: python src/data/raw_data_download.py
+    cmd: python src/data/download.py
     deps:
-    - path: src/data/raw_data_download.py
+    - path: src/data/download.py
       hash: md5
-      md5: 1701741fe7ed2c2f2b4c4ab269405819
-      size: 1040
+      md5: 616fe2eb924dac7f8295a34838c60638
+      size: 1035
     outs:
-    - path: data/raw_data
+    - path: data/raw
       hash: md5
       md5: 41dee78430cbebe25be9986bbb599d4a.dir
       size: 333757

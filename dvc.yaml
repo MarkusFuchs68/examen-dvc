@@ -1,7 +1,7 @@
 stages:
   prepare:
-    cmd: python src/data/raw_data_download.py
+    cmd: python src/data/download.py
     deps:
-    - src/data/raw_data_download.py
+    - src/data/download.py
     outs:
-    - data/raw_data
+    - data/raw
