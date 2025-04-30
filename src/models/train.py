@@ -7,7 +7,7 @@ from sklearn.metrics import mean_squared_error
 from joblib import dump
 
 
-def train_and_save():
+def train_and_save_model():
     """
     Trains a Random Forest Regressor on the preprocessed data and saves the best model.
     """
@@ -61,5 +61,5 @@ def train_and_save():
 
 if __name__ == "__main__":
     # Example usage
-    train_and_save()
-    print("Data has been trained, and model saved to models/rfr_best_model.pkl.")
+    train_and_save_model()
+    print("Model has been trained, and model saved to models/rfr_best_model.pkl.")

@@ -41,10 +41,31 @@ stages:
       nfiles: 6
     - path: src/models/train.py
       hash: md5
-      md5: 8c00d96302fcc7eb849f2dc9bd525c33
-      size: 2024
+      md5: ad0edb82e3f5aa4d1d8d061a672e7490
+      size: 2037
     outs:
     - path: models/rfr_best_model.pkl
       hash: md5
       md5: 74c6d918ed2601a1dc843b999923a97c
       size: 5396977
+  evaluate:
+    cmd: python src/models/evaluate.py
+    deps:
+    - path: models/rfr_best_model.pkl
+      hash: md5
+      md5: 74c6d918ed2601a1dc843b999923a97c
+      size: 5396977
+    - path: src/models/evaluate.py
+      hash: md5
+      md5: 538c5e46573120290d8c3f5edc4b6422
+      size: 1431
+    outs:
+    - path: data/predicted
+      hash: md5
+      md5: 8d28754a2ae6844d759b3599ccbbc86e.dir
+      size: 6789
+      nfiles: 1
+    - path: metrics/scores.json
+      hash: md5
+      md5: 040e829b5f6052e152d470a7fd4cb93a
+      size: 54
