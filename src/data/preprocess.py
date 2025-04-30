@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler
 
 
 def split_data(file_path):
@@ -35,7 +35,7 @@ def standardize_data(X_train, X_test):
     """
     Standardizes the features in the training and testing sets.
     """
-    scaler = StandardScaler()
+    scaler = MinMaxScaler()
     X_train_scaled = scaler.fit_transform(X_train)
     X_test_scaled = scaler.transform(X_test)
 
@@ -52,4 +52,4 @@ if __name__ == "__main__":
     file_path = os.path.join(os.getcwd(), 'data', 'raw', 'raw.csv')
     X_train, X_test, y_train, y_test = split_data(file_path)
     standardize_data(X_train, X_test)
-    print("Data has been split, standardized and saved to data/processed.")
+    print("Data has been split, normalized and saved to data/processed.")
